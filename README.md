@@ -4,11 +4,7 @@ Projeto 2 do **ElasTech**, bootcamp de tecnologia para mulheres do **PagBank** e
 
 Uma empresa empresta equipamentos (notebooks, monitores, headsets) pras pessoas colaboradoras, e o controle era feito numa planilha: ninguém sabia direito quem estava com o quê nem o que estava atrasado. Esse projeto resolve isso com uma API REST em Java + Spring Boot e uma tela web pra usar no navegador.
 
-**Tela:** https://SEU-PROJETO.onrender.com/
-**API:** https://SEU-PROJETO.onrender.com/equipamentos
-**Swagger:** https://SEU-PROJETO.onrender.com/swagger-ui/index.html
 
-> No plano grátis do Render, o serviço dorme depois de 15 minutos parado. A primeira requisição pode levar quase um minuto pra responder.
 
 ## Telas
 
