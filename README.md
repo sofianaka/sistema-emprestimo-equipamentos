@@ -105,7 +105,7 @@ mvn test
 
 ## Deploy
 
-Deploy no Render com o `Dockerfile` da raiz (Java 17). A variável de ambiente `SPRING_H2_CONSOLE_ENABLED=false` desliga o console do H2 em produção.
+https://sistema-emprestimo-equipamentos-0ll8.onrender.com
 
 ## Autora
 
