@@ -1,22 +1,34 @@
 # Sistema de Empréstimo de Equipamentos
 
-API em Java + Spring Boot pra controlar o empréstimo de equipamentos (notebooks, monitores, headsets) pras pessoas colaboradoras, com uma tela web simples pra usar sem Postman.
+Projeto 2 do **ElasTech**, bootcamp de tecnologia para mulheres do **PagBank** em parceria com a **SoulCode Academy**.
 
-**API no Render:** https://SEU-PROJETO.onrender.com
-**Tela:** https://SEU-PROJETO.onrender.com/ (a mesma URL, na raiz)
+Uma empresa empresta equipamentos (notebooks, monitores, headsets) pras pessoas colaboradoras, e o controle era feito numa planilha: ninguém sabia direito quem estava com o quê nem o que estava atrasado. Esse projeto resolve isso com uma API REST em Java + Spring Boot e uma tela web pra usar no navegador.
+
+**Tela:** https://SEU-PROJETO.onrender.com/
+**API:** https://SEU-PROJETO.onrender.com/equipamentos
+**Swagger:** https://SEU-PROJETO.onrender.com/swagger-ui/index.html
+
+> No plano grátis do Render, o serviço dorme depois de 15 minutos parado. A primeira requisição pode levar quase um minuto pra responder.
+
+## Telas
+
+![Tela de equipamentos](docs/tela-equipamentos.png)
+
+![Tela de empréstimos](docs/tela-emprestimos.png)
 
 ## Tecnologias
 
-- Java 21
+- Java 17
 - Spring Boot 3 (Web, Data JPA, Actuator)
 - H2 (banco em memória)
 - JUnit 5
 - springdoc-openapi (Swagger)
-- HTML + CSS + JavaScript puro na tela (em `src/main/resources/static/index.html`)
+- HTML, CSS e JavaScript puro na tela, separados em `src/main/resources/static` (`index.html`, `css/style.css`, `js/app.js`)
+- Docker + Render (deploy)
 
 ## Como rodar
 
-Precisa de Java 21 e Maven (ou abrir no IntelliJ e rodar `EmprestimosApplication`).
+Precisa de Java 17 e Maven (ou abrir no IntelliJ e rodar `EmprestimosApplication`).
 
 ```bash
 mvn spring-boot:run
@@ -86,11 +98,15 @@ mvn test
 
 ## Bônus feitos
 
-- **Tela web** (front em HTML/CSS/JS servido pelo próprio Spring Boot)
+- **Tela web**: front em HTML/CSS/JS servido pelo próprio Spring Boot, com resumo (total, disponíveis, emprestados, atrasados), filtros e histórico por pessoa
 - **Swagger** (`/swagger-ui/index.html`)
 - **Actuator** (`/actuator/health`, usado como Health Check Path no Render)
 - **Tratamento de erros** com `@RestControllerAdvice`: 404 pra recurso que não existe, 409 pra R1, R3, R4, R6, R9 e R10, 400 pra dados inválidos
 
 ## Deploy
 
-Deploy no Render com o `Dockerfile` da raiz (Java 21). No Render, a variável de ambiente `SPRING_H2_CONSOLE_ENABLED=false` desliga o console do H2.
+Deploy no Render com o `Dockerfile` da raiz (Java 17). A variável de ambiente `SPRING_H2_CONSOLE_ENABLED=false` desliga o console do H2 em produção.
+
+## Autora
+
+Sofia Mayumi Brandão Nakamaru · [GitHub](https://github.com/sofianaka)
